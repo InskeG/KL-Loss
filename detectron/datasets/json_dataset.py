@@ -130,10 +130,16 @@ class JsonDataset(object):
         # Reference back to the parent dataset
         entry['dataset'] = self
         # Make file_name an abs path
-        im_path = os.path.join(
-            self.image_directory, self.image_prefix + entry['file_name']
-        )
-        assert os.path.exists(im_path), 'Image \'{}\' not found'.format(im_path)
+        if "panorams" in self.name:
+            im_path = os.path.join(
+                self.image_directory, entry['pano_id'] + ".jpg"
+            )
+            print(im_path)
+        else:
+            im_path = os.path.join(
+                self.image_directory, self.image_prefix + entry['file_name']
+            )
+        #assert os.path.exists(im_path), 'Image \'{}\' not found'.format(im_path)
         entry['image'] = im_path
         entry['flipped'] = False
         entry['has_visible_keypoints'] = False

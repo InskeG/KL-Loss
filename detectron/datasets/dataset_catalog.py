@@ -213,6 +213,24 @@ _DATASETS = {
             _DATA_DIR + '/VOC2012/annotations/voc_2012_val.json',
         _DEVKIT_DIR:
             _DATA_DIR + '/VOC2012/VOCdevkit2012'
+    },
+    'panorams_train': {
+        _IM_DIR:
+            '/home/inskeg/data/ams/panos/images_padded',
+        _ANN_FN:
+            '/home/inskeg/data/ams/panorams/ann_panorams_train_cocostyle.json'
+    },
+    'panorams_test_noisy': {
+        _IM_DIR:
+            '/home/inskeg/data/ams/panos/images_padded',
+        _ANN_FN:
+            '/home/inskeg/data/ams/panorams/ann_panorams_test_noisy_cocostyle.json'
+    },
+    'panorams_test_gt': {
+        _IM_DIR:
+            '/home/inskeg/data/ams/panos/images_padded',
+        _ANN_FN:
+            '/home/inskeg/data/ams/panorams/ann_panorams_test_gt_cocostyle.json'
     }
 }
 
